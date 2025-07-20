@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akira Accesorios - Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+
+<body>
+    <section class="akira-section">
+        <h1>Akira accesorios</h1>
+    </section>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo akira">
+        </div>
+
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#productosDestacados">Productos</a></li>
+                <li><a href="index.html#reseñas">Reseñas</a></li>
+                <li><a href="">Sobre nosotros</a></li>
+                <li><a href="">Materiales y cuidados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <section>
+        <h2 class="titulo-contacto">Contactanos</h2>
+    </section>
+
+    <div class="contacto-container">
+        <div class="mapa-info">
+            <!-- <p><i class="fa-brands fa-instagram"></i> akiraaccesorios__</p> -->
+            <!-- <p><i class="fa-solid fa-location-dot"></i> Vivoratá, Buenos Aires, Arg</p> -->
+            <h3>Nuestra ubicación</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25266.005794071327!2d-57.6749568!3d-37.666816000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1746836092159!5m2!1ses!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <main class="formulario-container">
+            <h3>Tu consulta</h3>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label>
+                        Nombre:
+                        <input type="text" name="nombre" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Email:
+                        <input type="email" name="email" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Teléfono:
+                        <input type="tel" name="telefono">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        Tu consulta:
+                        <textarea name="consulta" rows="4" required></textarea>
+                    </label>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+            <div id="form-message" class="form-message"></div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="redes">
+            <p>
+                <a href="https://www.instagram.com/akiraaccesorios__/" target="_blank"><i
+                        class="fa-brands fa-instagram custom-icon"></i></a>
+                <i class="fa-brands fa-facebook custom-icon"></i>
+            </p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#productosDestacados">Productos</a></li>
+                <li><a href="index.html#reseñas">Reseñas</a></li>
+                <li><a href="index.html">Sobre nosotros</a></li>
+                <li><a href="index.html">Materiales y cuidados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

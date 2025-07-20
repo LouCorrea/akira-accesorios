@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akira Accesorios - Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+
+<body>
+    <section class="akira-section">
+        <h1>Akira accesorios</h1>
+    </section>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="logo akira">
+        </div>
+
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#section-main">Inicio</a></li>
+                <li><a href="#productosDestacados">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="">Sobre nosotros</a></li>
+                <li><a href="">Materiales y cuidados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <section id="section-main" class="slider">
+        <ul>
+            <li>
+                <img src="img/tiendaonline.png" alt="portada tienda online">
+            </li>
+            <li>
+                <img src="img/comprasegura.png" alt="portada compra segura">
+            </li>
+        </ul>
+    </section>
+    <div class="centrar-titulo">
+        <div class="seguinos">
+            <p><i class="fa-brands fa-instagram"></i> akiraacesorios__</p>
+            <p>Seguinos en instagram</p>
+        </div>
+    </div>
+    <div id="video">
+        <video autoplay loop muted playsinline poster="img/logo_fondo.png">
+            <source src="videos/videoaccesorios.mp4">
+        </video>
+    </div>
+    <main>
+        <section id="productosDestacados">
+            <h2 id="destacados">Productos destacados</h2>
+            <div id="contenedorProductos">
+                <!-- Los productos se renderizan dinámicamente desde JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Sección de Reseñas -->
+        <section id="reseñas" class="reseñas-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div id="reseñas-container" class="reseñas-container">
+                <!-- Las reseñas se renderizan dinámicamente desde JavaScript -->
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="redes">
+            <p>
+                <a href="https://www.instagram.com/akiraaccesorios__/" target="_blank"><i
+                        class="fa-brands fa-instagram custom-icon"></i></a>
+                <i class="fa-brands fa-facebook custom-icon"></i>
+            </p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#section-main">Inicio</a></li>
+                <li><a href="#productosDestacados">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="">Sobre nosotros</a></li>
+                <li><a href="">Materiales y cuidados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
