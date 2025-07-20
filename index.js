@@ -144,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Carrito de compras
     let carrito = [];
+
     const carritoIcon = document.querySelector(".carrito");
     const contenedorProductos = document.getElementById("contenedorProductos");
 
@@ -230,6 +231,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function actualizarCarrito() {
         const carritoItems = document.querySelector(".carrito-items");
         const totalElement = document.getElementById("total");
+        const btnVaciar = document.querySelector(".btn-vaciar");
+        const btnComprar = document.querySelector(".btn-comprar");
         
         carritoItems.innerHTML = "";
         let total = 0;
@@ -244,11 +247,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="item-actions">
                     <div class="quantity-controls">
-                        <button class="btn-cantidad" data-index="${index}" data-change="-1">-</button>
+                        <button class="btn-cantidad" onclick="cambiarCantidad(${index}, -1)">-</button>
                         <span class="quantity-display">${item.cantidad}</span>
-                        <button class="btn-cantidad" data-index="${index}" data-change="1">+</button>
+                        <button class="btn-cantidad" onclick="cambiarCantidad(${index}, 1)">+</button>
                     </div>
-                    <button class="btn-eliminar" data-index="${index}">Eliminar</button>
+                    <button class="btn-eliminar" onclick="eliminarProducto(${index})">Eliminar</button>
                 </div>
             `;
             carritoItems.appendChild(itemElement);
@@ -257,26 +260,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
         totalElement.textContent = total.toLocaleString();
     
-        // Eventos para botones dinámicos
-        carritoItems.querySelectorAll(".btn-cantidad").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const index = btn.dataset.index;
-                const change = parseInt(btn.dataset.change);
-                carrito[index].cantidad += change;
-                if (carrito[index].cantidad <= 0) carrito.splice(index, 1);
-                actualizarCarrito();
-                actualizarContadorCarrito();
-            });
-        });
-    
-        carritoItems.querySelectorAll(".btn-eliminar").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const index = btn.dataset.index;
-                carrito.splice(index, 1);
-                actualizarCarrito();
-                actualizarContadorCarrito();
-            });
-        });
+        // Deshabilitar/habilitar botones según el estado del carrito
+        if (btnVaciar) btnVaciar.disabled = carrito.length === 0;
+        if (btnComprar) btnComprar.disabled = carrito.length === 0;
     }
     
 

@@ -111,10 +111,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 35px;
-  height: 35px;
+  min-width: 40px;  /* Aumentado para mejor área de click */
+  height: 40px;     /* Aumentado para mejor área de click */
   order: 1;
   position: relative;
+  z-index: 2000;    /* Asegura que esté por encima de otros elementos */
 }
 
 .carrito-contador {
@@ -354,6 +355,7 @@ button {
     position: absolute;
     right: 2rem;
     cursor: pointer;
+    z-index: 2000;
   }
 }
 
@@ -640,6 +642,14 @@ button {
 
 .btn-comprar:hover {
   background-color: #218838;
+}
+
+.btn-vaciar:disabled,
+.btn-comprar:disabled {
+  background-color: #b0b0b0 !important;
+  color: #f0f0f0 !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
 }
 
 .notificacion {
